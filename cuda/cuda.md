@@ -1,3 +1,4 @@
+# cudaMalloc format
 why with 'cudaMalloc' you often write '(void**)&var', consider the following:
 
 cudaMalloc allocates a memory on the GPU. The memory type it is referred is void* as it does not really care about the data type.
@@ -16,3 +17,7 @@ void myMalloc(void** ret, size_t size) {
 Now, if you pass '(void**)&var' to myMalloc, the function will be able to overwrite the value of the var --- as ret will be pointing to var variable.
 
 
+# dynamic shared memory using extern
+One possible reason that saving shared memory might be valuable, is because it can impact occupancy, and thus performance.
+
+Suppose I had a parallel reduction code, and suppose that it used shared memory as the primary reduction medium. Typically the amount of shared memory I will need will be related to the number of threads I use in my threadblock. Now let's also suppose that depending on the exact problem I have, I may want to adjust the number of threads per threadblock, at runtime.
