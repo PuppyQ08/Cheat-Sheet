@@ -21,3 +21,19 @@ Now, if you pass '(void**)&var' to myMalloc, the function will be able to overwr
 One possible reason that saving shared memory might be valuable, is because it can impact occupancy, and thus performance.
 
 Suppose I had a parallel reduction code, and suppose that it used shared memory as the primary reduction medium. Typically the amount of shared memory I will need will be related to the number of threads I use in my threadblock. Now let's also suppose that depending on the exact problem I have, I may want to adjust the number of threads per threadblock, at runtime.
+
+# Bank conflict
+interleaved addressing has bank conflict but sequential addressing doesn't have.
+Since:
+Note that a bank is not the same thing as a word or location in shared memory. A bank refers collectively to all words in shared memory that satisfy a certain address pattern condition.
+
+In general, shared memory bank conflicts can be avoided if all accesses from a warp (or half-warp in cc 1.x) go to separate banks. These accesses need not be in warp order, i.e. they can be scrambled, as long as the request from each thread targets a separate bank.
+
+The above description covers every arrow in your diagram except those arrows pointing to bank 5.
+
+If we had no other information, then multiple arrows targetting a single bank would indicate a potential bank conflict.
+
+However, there is an exception, when not only are the accesses targetting the same bank, but they are targetting the same word in memory. When multiple shared memory requests target the same word in memory, then the shared memory system has a broadcast mechanism to take the data contained in that word, and service it to all the requesting threads, in a single cycle.
+
+# Block size 
+It would be better is 2**n threads per blocks, since you may want have stride/2 in the reduction.
