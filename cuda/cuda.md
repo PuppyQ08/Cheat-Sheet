@@ -37,3 +37,7 @@ However, there is an exception, when not only are the accesses targetting the sa
 
 # Block size 
 It would be better is 2**n threads per blocks, since you may want have stride/2 in the reduction.
+
+# GPU structure 
+[See details](https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#ptx-machine-model)
+
