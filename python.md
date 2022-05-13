@@ -22,3 +22,8 @@ with open('test.csv', newline='') as c: #newline is to let python do newline its
 # python memoization
 `@lru_cache(maxsize=128,typed=False)`
 It will store the most recent call to this function then we can reuse.
+
+# string operation
+`firstoccurence,-1 = text.find(substring,startindex,endindex)` 
+search the substring in the start and end period and return the first index,
+`rfind` return the last index.
