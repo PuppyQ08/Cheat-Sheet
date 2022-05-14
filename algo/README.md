@@ -15,7 +15,7 @@ int lcs(string s1,string s2, int n1, int n2){
     else
         return max(lcs(s1,s2,n1,n2-1),lcs(s1,s2,n1-1,n2));\\here we enter the tree branch
 }
-//Complexity O(2^(max(m,n))) tree recursive complexity
+//Complexity O(2^(max(n1,n2))) tree recursive complexity
 ```
 Memoization: since the state is marked by n1 and n2 which is the curr index of each string, we can use a 2D array to mark our steps. 
 ```
@@ -23,12 +23,12 @@ vector<vector<int>> memo (s1.size()+1,s2.size()+1); // +1 is because we start wi
 int lcs(string s1,string s2, int n1, int n2){
     if(n1 ==0 or n2 ==0 )
         return 0;    
-    if(memo[m][n]>0) return memo[m][n];
+    if(memo[n1][n2]>0) return memo[m][n];
     if (s1[n1-1] == s2[n2-1])
-        memo[m][n] = 1 + lcs(s1,s2,n1-1,n2-1);
+        memo[n1][n2] = 1 + lcs(s1,s2,n1-1,n2-1);
     else
-        memo[m][n] = max(lcs(s1,s2,n1,n2-1),lcs(s1,s2,n1-1,n2));\\here we enter the tree branch
-    return memo[m][n];
+        memo[n1][n2] = max(lcs(s1,s2,n1,n2-1),lcs(s1,s2,n1-1,n2));\\here we enter the tree branch
+    return memo[n1][n2];
 }
 ```
 The DP process is the same but in reverse direction.
