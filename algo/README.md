@@ -5,7 +5,7 @@
 ## Longest Common Subsequence
 
 Plain approach
-
+Traverse the tree model. If it didn't work out then you must build a wrong tree.
 ```
 int lcs(string s1,string s2, int n1, int n2){
     if(n1 ==0 or n2 ==0 )
@@ -18,6 +18,8 @@ int lcs(string s1,string s2, int n1, int n2){
 //Complexity O(2^(max(n1,n2))) tree recursive complexity
 ```
 Memoization: since the state is marked by n1 and n2 which is the curr index of each string, we can use a 2D array to mark our steps. 
+Generally speaking, you need to find the common part in your tree.
+If you can't find it, your tree is wrong.
 ```
 vector<vector<int>> memo (s1.size()+1,s2.size()+1); // +1 is because we start with no string.
 int lcs(string s1,string s2, int n1, int n2){
