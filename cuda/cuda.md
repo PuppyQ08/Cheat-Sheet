@@ -41,3 +41,9 @@ It would be better is 2**n threads per blocks, since you may want have stride/2 
 # GPU structure 
 [See details](https://docs.nvidia.com/cuda/parallel-thread-execution/index.html#ptx-machine-model)
 
+
+# Coalesced memory access
+Memory requests from a warp are handled together.
+When memory requests from the threads of a warp are sequential,
+the memory requests can be combined into fewer
+transactions. These kind of accesses are called coalesced memory accesses.
