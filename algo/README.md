@@ -66,7 +66,20 @@ while de:
 ```
 
 # Pointer
+
 good habit: always initialize the pointer to NULL
 ```cpp
 TreeNode* temp = NULL;
 ```
+# String
+
+- string to int and reverse
+`int num = stoi(str);`
+`string str = to_string(num);`
+
+- concatenate string
+`str+"test";`
+
+- substring (string slicing)
+`string str = str1.substr(beginindex,length);`
+
