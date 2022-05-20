@@ -46,9 +46,9 @@ define the tree model(brutal force)-- add memoization along the tree -- simply f
 
 ```cpp
 queue<pair<TreeNode *, int>> q;
-q.push({root,sum});\\
+q.push({root,sum});//or stack
 while (!q.empty()){
-    auto [node, curr_sum] = q.front();
+    auto [node, curr_sum] = q.front();//stack is top()
     q.pop();
     //blah blah
     //push
@@ -63,4 +63,10 @@ while de:
     node, curr_sum = de.pop() # for queue de.pop(0)
     #bla blah
     de.append((node.right,curr_sum-node.right.val))
+```
+
+# Pointer
+good habit: always initialize the pointer to NULL
+```cpp
+TreeNode* temp = NULL;
 ```
