@@ -56,6 +56,24 @@ but &array is the memory address of the first item.
 So if you want to pass in by void* which should be the pointer to the first item,
 then you need to pass in &vector.front() or array.
 
+## Pointer Initialization
+good habit: always initialize the pointer to NULL
+```cpp
+TreeNode* temp = NULL;
+```
+
+# String
+
+- string to int and reverse
+`int num = stoi(str);`
+`string str = to_string(num);`
+
+- concatenate string
+`str+"test";`
+
+- substring (string slicing)
+`string str = str1.substr(beginindex,length);`
+
 # L-Value R-Value
 left and right of the equal sign
 In Cpp, the type of the L-value doesn't affect the type of rvalue.

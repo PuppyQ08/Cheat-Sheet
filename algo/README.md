@@ -65,24 +65,6 @@ while de:
     de.append((node.right,curr_sum-node.right.val))
 ```
 
-# Pointer
-
-good habit: always initialize the pointer to NULL
-```cpp
-TreeNode* temp = NULL;
-```
-# String
-
-- string to int and reverse
-`int num = stoi(str);`
-`string str = to_string(num);`
-
-- concatenate string
-`str+"test";`
-
-- substring (string slicing)
-`string str = str1.substr(beginindex,length);`
-
 # Binary Search
 
 left and right close.
@@ -103,5 +85,16 @@ int binarySearch(vector<int>& nums, int target){
   // End Condition: left > right
   return -1;
 }
+```
+left close and right open (if you need to determine the right element)
+```cpp
+int left = 0, right = nums.size();
+  while(left < right){
+    // Prevent (left + right) overflow
+    int mid = left + (right - left) / 2;
+    if(nums[mid] == target){ return mid; }
+    else if(nums[mid] < target) { left = mid + 1; }
+    else { right = mid; }
+  }
 ```
 
