@@ -58,3 +58,14 @@ then you need to pass in &vector.front() or array.
 
 # L-Value R-Value
 left and right of the equal sign
+In Cpp, the type of the L-value doesn't affect the type of rvalue.
+so :
+```cpp
+int n = 2**31;
+long long int m = n*n;
+```
+it will cause overflow, since n*n > 2E32 and it is int by default
+You need to change at least one of the lvalue to long long:
+```cpp
+long long int m = (long long)n*n;
+```
