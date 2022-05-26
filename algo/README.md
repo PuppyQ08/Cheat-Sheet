@@ -87,6 +87,9 @@ int binarySearch(vector<int>& nums, int target){
 }
 ```
 left close and right open (if you need to determine the right element)
+This is good if you need to get access to mid+1 value
+left and right close algo will access out of array since mid = arry.size() you still want to get access to mid+1
+But this algo:mid = size()
 ```cpp
 int left = 0, right = nums.size();
   while(left < right){
@@ -97,4 +100,24 @@ int left = 0, right = nums.size();
     else { right = mid; }
   }
 ```
+here template 2 is equivalent to template 1 because you just need to compare with target.
+But if you need to access to mid and mid+1 value (which is the reason we use template),
+you need to change `right= nums.size()` to `right= nums.size()-1` otherwise you got segfault.
 
+left and right open:
+This is good if you need mid-1 mid and mid+1,
+```cpp
+   int left = 0, right = nums.length - 1;
+    while (left + 1 < right){
+        // Prevent (left + right) overflow
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            left = mid;
+        } else {
+            right = mid;
+        }
+    }
+```
+It need post-processing: Loop/Recursion ends when you have 2 elements left. Need to assess if the remaining elements meet the condition.
