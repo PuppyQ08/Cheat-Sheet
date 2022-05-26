@@ -121,3 +121,7 @@ This is good if you need mid-1 mid and mid+1,
     }
 ```
 It need post-processing: Loop/Recursion ends when you have 2 elements left. Need to assess if the remaining elements meet the condition.
+So I don't recommand this template:
+You can use template 1 or 2 but if you need to get access to mid-1:
+simpy add: `if(mid==left || nums[mid-1] ==target)` 
+
