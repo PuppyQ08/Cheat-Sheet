@@ -72,6 +72,9 @@ But it can be generalized to :
 - To find which part does **not** have target.
 - To find the boarder of searching space.
 
+    The target is flexible:
+    for example, lc 658 find K closest ele, you can use nums[mid+k] work as target to compare with nums[mid] 
+
 Here are several possible templates:
 
 1. left and right close.

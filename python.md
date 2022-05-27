@@ -27,3 +27,15 @@ It will store the most recent call to this function then we can reuse.
 `firstoccurence,-1 = text.find(substring,startindex,endindex)` 
 search the substring in the start and end period and return the first index,
 `rfind` return the last index.
+
+# custom sort
+```python
+l1 = [(3,'aaa'),(2,'bbb')]
+sorted(l1,key = lambda x: (-x[0],x[1]))
+# first sort by number in descending order then if equal sort by string in ascending order.
+# it can be used to sort on list based on the other list
+# but you need to zip(list1,list2) first
+
+l1 = [1,2,3,4]
+sorted(l1,key = lambda x: x**3)#sort in cubic value
+```
