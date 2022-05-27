@@ -1,4 +1,19 @@
-# array slicing
+# array and list
+
+## List
+
+```java
+List<Integer> List = new ArrayList<Integer>();
+List.add(num);
+List.add(index,num);
+List.remove(index);
+List.set(index,num);// replace 
+List.size();
+List.get(index);
+List.subList(start,end);//end not included
+```
+
+## Array slicing
 
 ```java
 import java.util.Arrays;
