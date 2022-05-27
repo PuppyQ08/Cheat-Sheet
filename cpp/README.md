@@ -87,3 +87,14 @@ You need to change at least one of the lvalue to long long:
 ```cpp
 long long int m = (long long)n*n;
 ```
+
+# Vector
+
+## Slicing
+
+```cpp
+auto first = vec.begin() + x;
+auto last = vec.begin() + y;
+vector<T> vector(first,last);
+//{1,2,3,4,5} x= 1,y=3, result: {2,3} just like vec[first:last] in python
+```
