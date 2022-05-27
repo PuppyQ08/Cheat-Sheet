@@ -67,7 +67,15 @@ while de:
 
 # Binary Search
 
-left and right close.
+The key point of Binary search is not only for finding a "target" value.
+But it can be generalized to :
+- To find which part does **not** have target.
+- To find the boarder of searching space.
+
+Here are several possible templates:
+
+1. left and right close.
+
 ```cpp
 int binarySearch(vector<int>& nums, int target){
   if(nums.size() == 0)
@@ -86,7 +94,9 @@ int binarySearch(vector<int>& nums, int target){
   return -1;
 }
 ```
-left close and right open (if you need to determine the right element)
+
+2. left close and right open (if you need to determine the right element)
+
 This is good if you need to get access to mid+1 value
 left and right close algo will access out of array since mid = arry.size() you still want to get access to mid+1
 But this algo:mid = size()
@@ -103,8 +113,8 @@ int left = 0, right = nums.size();
 here template 2 is equivalent to template 1 because you just need to compare with target.
 But if you need to access to mid and mid+1 value (which is the reason we use template),
 you need to change `right= nums.size()` to `right= nums.size()-1` otherwise you got segfault.
-
-left and right open:
+ 
+3. left and right open:
 This is good if you need mid-1 mid and mid+1,
 ```cpp
    int left = 0, right = nums.length - 1;
