@@ -98,3 +98,35 @@ auto last = vec.begin() + y;
 vector<T> vector(first,last);
 //{1,2,3,4,5} x= 1,y=3, result: {2,3} just like vec[first:last] in python
 ```
+
+## Sorting
+
+sort one vector based on the other:
+one way is to create `struct` of two or more variable:
+```cpp
+struct test{
+    string name;
+    int num;
+    double age;
+    }
+vector<test> vec;
+vec.push_back(test());//less effective
+vec[0].name = "what";
+
+vec.push_back({"what",1,1.1});
+
+/* then do customized sorting */
+sort(vec.begin(),vec.end(),[](auto const &a, auto const &b){
+return a.age < b.age;});
+//ascending order
+```
+Or you can use pair if you have two vectors:
+
+```cpp
+using test = std::pair< int,std::string>;
+std::vector<test> vec = {{"waht",0}};
+sort(vec.begin(),vec.end(),[](auto const &a, auto const &b){
+return a.second < b.second;});
+```
+
+
