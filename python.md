@@ -28,7 +28,7 @@ It will store the most recent call to this function then we can reuse.
 search the substring in the start and end period and return the first index,
 `rfind` return the last index.
 
-# custom sort
+# custom sort min max
 ```python
 l1 = [(3,'aaa'),(2,'bbb')]
 sorted(l1,key = lambda x: (-x[0],x[1]))
@@ -38,4 +38,8 @@ sorted(l1,key = lambda x: (-x[0],x[1]))
 
 l1 = [1,2,3,4]
 sorted(l1,key = lambda x: x**3)#sort in cubic value
+```
+Same customized min or max:
+```python
+min(val1,val2,key = lambda x: abs(target - x))
 ```
