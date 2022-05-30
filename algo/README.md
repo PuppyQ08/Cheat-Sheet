@@ -116,7 +116,14 @@ int left = 0, right = nums.size();
 here template 2 is equivalent to template 1 because you just need to compare with target.
 But if you need to access to mid and mid+1 value (which is the reason we use template),
 you need to change `right= nums.size()` to `right= nums.size()-1` otherwise you got segfault.
- 
+
+Also if the vector has duplicated numbers, and you want to find the edge of target*n, lager value.
+You can simply do
+```cpp
+if(nums[mid]<=target) l = mid+1;
+else  r= mid;
+``` 
+
 3. left and right open:
 This is good if you need mid-1 mid and mid+1,
 ```cpp
