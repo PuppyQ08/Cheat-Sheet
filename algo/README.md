@@ -122,6 +122,7 @@ You can simply do
 ```cpp
 if(nums[mid]<=target) l = mid+1;
 else  r= mid;
+return l;// but you need left
 ``` 
 
 3. left and right open:
