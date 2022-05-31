@@ -129,4 +129,7 @@ sort(vec.begin(),vec.end(),[](auto const &a, auto const &b){
 return a.second < b.second;});
 ```
 
+In Java, Arrays.sort() for primitives is implemented using a variant of the Quick Sort algorithm, which has a space complexity of `O(log n)`
+In C++, the sort() function provided by STL uses a hybrid of Quick Sort, Heap Sort and Insertion Sort, with a worst case space complexity of `O(\log n)`
+In Python, the sort() function is implemented using the Timsort algorithm, which has a worst-case space complexity of `O(n)`
 
