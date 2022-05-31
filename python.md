@@ -43,3 +43,7 @@ Same customized min or max:
 ```python
 min(val1,val2,key = lambda x: abs(target - x))
 ```
+
+# assert
+`assert(a == 1)` is a good documentation for you to understant the code. It will pause the code if it fail the condition.
+
