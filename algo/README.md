@@ -123,7 +123,9 @@ You can simply do
 if(nums[mid]<target) l = mid+1;
 else  r= mid;
 return l;// but you need left
+// you can also use template 1 I recommand that .
 ``` 
+This is an alternative procedure published by Hermannin 1962. (see in Wikipedia"binary search")
 
 3. left and right open:
 This is good if you need mid-1 mid and mid+1,

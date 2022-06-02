@@ -119,6 +119,8 @@ vec.push_back({"what",1,1.1});
 sort(vec.begin(),vec.end(),[](auto const &a, auto const &b){
 return a.age < b.age;});
 //ascending order
+// if you need variable from outside, then you need to add&:
+[&] (auto...
 ```
 Or you can use pair if you have two vectors:
 
