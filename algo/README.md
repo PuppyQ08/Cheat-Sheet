@@ -1,4 +1,11 @@
 # Cheat Sheet for the algorithm and data structure
+## Topic:
+- Search: Backtrack/recursion, BFS/DFS, Binary search.
+- sort: quick sort, merge sort...
+- strategy: divide n conquer, greedy, two pointer, sliding window,prefix sum,
+- Dynamic programming
+- data structure: queue/stack, linked list,heap, hash table, tree, graph, union find, string
+
 
 # Dynamic Programming
 
