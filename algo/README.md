@@ -120,7 +120,7 @@ you need to change `right= nums.size()` to `right= nums.size()-1` otherwise you 
 Also if the vector has duplicated numbers, and you want to find the edge of target*n, lager value.
 You can simply do
 ```cpp
-if(nums[mid]<=target) l = mid+1;
+if(nums[mid]<target) l = mid+1;
 else  r= mid;
 return l;// but you need left
 ``` 
@@ -145,4 +145,15 @@ It need post-processing: Loop/Recursion ends when you have 2 elements left. Need
 So I don't recommand this template:
 You can use template 1 or 2 but if you need to get access to mid-1:
 simpy add: `if(mid==left || nums[mid-1] ==target)` 
+
+# array
+`array = [1,2,3,4]`
+
+Subarray : [1,2],[1,2,3] - is continous and maintains relative order of elements
+
+Subsequence: [1,2,4] - is not continous but maintains relative order of elements
+
+Subset: [1,3,2] - is not continous and does not maintain relative order of elements
+
+
 
