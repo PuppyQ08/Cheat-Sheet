@@ -46,7 +46,9 @@ min(val1,val2,key = lambda x: abs(target - x))
 
 # assert
 `assert(a == 1)` is a good documentation for you to understant the code. It will pause the code if it fail the condition.
+The examples also give several common situation where you need to use assert to check your code.
 eg:
 `assert np.alltrue(train_set_x_flatten[0:3, 1] == [196, 192, 190]), "Wrong solution."`
+`assert type(b) == float`
 
 
