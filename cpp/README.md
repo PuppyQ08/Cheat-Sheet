@@ -62,11 +62,22 @@ good habit: always initialize the pointer to NULL
 TreeNode* temp = NULL;
 ```
 
-# String
+# String and char
 
 - string to int and reverse
 `int num = stoi(str);`
 `string str = to_string(num);`
+
+- char to string
+`string s(1,x);//1 is the size of char`
+`std::string(1,x);`
+
+- string to char
+`str.c_str`
+
+- char to int
+` atoi(str.c_str)`
+atoi is for C string, stoi is for C++ string
 
 - concatenate string
 `str+"test";`
