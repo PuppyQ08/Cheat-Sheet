@@ -49,7 +49,8 @@ define the tree model(brutal force)-- add memoization along the tree -- simply f
 
 # Binary Tree
 
-## Iterative BFS(queue) DFS(stack)
+# Iterative BFS(queue) DFS(stack)
+
 
 ```cpp
 queue<pair<TreeNode *, int>> q;
@@ -71,6 +72,7 @@ while de:
     #bla blah
     de.append((node.right,curr_sum-node.right.val))
 ```
+Monotonic stacks are a good option when a problem involves comparing the size of numeric elements, with their order being relevant.
 
 # Binary Search
 
