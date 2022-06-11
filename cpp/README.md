@@ -79,6 +79,7 @@ atoi is for C string, stoi is for C++ string
 
 - char to int
 `int(a-'0')`
+`k= k*10 + a-'0'`k is last digits if it has two digit number.
 
 - concatenate string
 `str+"test";`

@@ -51,6 +51,7 @@ define the tree model(brutal force)-- add memoization along the tree -- simply f
 
 # Iterative BFS(queue) DFS(stack)
 
+***use recursion is the same as using stack because recursion uses the call stack.***
 
 ```cpp
 queue<pair<TreeNode *, int>> q;
