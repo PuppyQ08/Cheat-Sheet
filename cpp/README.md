@@ -72,12 +72,13 @@ TreeNode* temp = NULL;
 `string s(1,x);//1 is the size of char`
 `std::string(1,x);`
 
-- string to char
+- c++ string to c string const char*
 `str.c_str`
-
-- char to int
 ` atoi(str.c_str)`
 atoi is for C string, stoi is for C++ string
+
+- char to int
+`int(a-'0')`
 
 - concatenate string
 `str+"test";`
