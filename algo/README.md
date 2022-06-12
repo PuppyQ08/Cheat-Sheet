@@ -159,6 +159,7 @@ You can use template 1 or 2 but if you need to get access to mid-1:
 simpy add: `if(mid==left || nums[mid-1] ==target)` 
 
 # array
+
 `array = [1,2,3,4]`
 
 Subarray : [1,2],[1,2,3] - is continous and maintains relative order of elements
@@ -166,6 +167,10 @@ Subarray : [1,2],[1,2,3] - is continous and maintains relative order of elements
 Subsequence: [1,2,4] - is not continous but maintains relative order of elements
 
 Subset: [1,3,2] - is not continous and does not maintain relative order of elements
+
+# Heap
+
+A common misconception is that a Heap is the same as a Priority Queue, which is not true. A priority queue is an abstract data type, while a Heap is a data structure. Therefore, a Heap is not a Priority Queue, but a way to implement a Priority Queue.
 
 
 
