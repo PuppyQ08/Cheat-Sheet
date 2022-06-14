@@ -172,5 +172,7 @@ Subset: [1,3,2] - is not continous and does not maintain relative order of eleme
 
 A common misconception is that a Heap is the same as a Priority Queue, which is not true. A priority queue is an abstract data type, while a Heap is a data structure. Therefore, a Heap is not a Priority Queue, but a way to implement a Priority Queue.
 
+How to determine a node is leave? : total nodes number n divided by 2, if index > n/2 then this is a leave.
+
 
 
