@@ -110,9 +110,8 @@ int binarySearch(vector<int>& nums, int target){
 
 2. left close and right open (if you need to determine the right element)
 
-This is good if you need to get access to mid+1 value
-left and right close algo will access out of array since mid = arry.size() you still want to get access to mid+1
-But this algo:mid = size()
+This works best if you need to get access to mid+1 value
+while left-and-right-close algo will array limit since mid = arry.size()
 ```cpp
 int left = 0, right = nums.size();
   while(left < right){
@@ -124,7 +123,7 @@ int left = 0, right = nums.size();
   }
 ```
 here template 2 is equivalent to template 1 because you just need to compare with target.
-But if you need to access to mid and mid+1 value (which is the reason we use template),
+But if you need to access to mid and mid+1 value 
 you need to change `right= nums.size()` to `right= nums.size()-1` otherwise you got segfault.
 
 Also if the vector has duplicated numbers, and you want to find the edge of target*n, lager value.
@@ -136,6 +135,17 @@ return l;// but you need left
 // you can also use template 1 I recommand that .
 ``` 
 This is an alternative procedure published by Hermannin 1962. (see in Wikipedia"binary search")
+On the other hand, you can modify to left open and right close algo:
+```python
+    l, r = 0,n
+    while l < r:
+        mid = (l+r+1)//2 # this is a trick for ceil(a/b) = (a+b-1)//2
+        if nums[mid] >= nums[mid - 1]:
+            l = mid
+        else:
+            r = mid - 1
+    return l
+```
 
 3. left and right open:
 This is good if you need mid-1 mid and mid+1,
