@@ -184,5 +184,10 @@ A common misconception is that a Heap is the same as a Priority Queue, which is 
 
 How to determine a node is leave? : total nodes number n divided by 2, if index > n/2 then this is a leave.
 
+# Dict
+
+In python, you can use defaultdict(int). If insist on dict, then the following is to set root to be 0 if not defined otherwise plus 1.
+`dict[root] = dict.get(root, 0) + 1`
+
 
 
